@@ -10,13 +10,13 @@ script:
 
 after_success:
  - docker build -t akrommusajid/multi-client ./client
- - docker build -t akrommusajid/mutli-nginx ./nginx
+ - docker build -t akrommusajid/multi-nginx ./nginx
  - docker build -t akrommusajid/multi-server ./server
  - docker build -t akrommusajid/multi-worker ./worker
  # login to docker id
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  # take images to the docker hub
- - docker push akrommusajid/mutli-client
+ - docker push akrommusajid/multi-client
  - docker push akrommusajid/multi-nginx
  - docker push akrommusajid/multi-server
  - docker push akrommusajid/multi-worker
