@@ -16,7 +16,7 @@ after_success:
  # login to docker id
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  # take images to the docker hub
- - docker push akrommusajid/multi-client
  - docker push akrommusajid/multi-nginx
  - docker push akrommusajid/multi-server
  - docker push akrommusajid/multi-worker
+ - docker push akrommusajid/multi-client
